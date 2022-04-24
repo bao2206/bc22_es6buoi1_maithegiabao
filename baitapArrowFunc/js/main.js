@@ -23,13 +23,15 @@ colourButton();
 let house = document.getElementById("house");
 let pickColours = document.getElementsByClassName("color-button");
 for (let i = 0; i < pickColours.length; i++) {
-  pickColours[i].addEventListener("click", changeColour(colorList[i], i));
+  pickColours[i].addEventListener("click", () => {
+    changeColour(colourList[i], i);
+  });
 }
 
 const changeColour = (a, b) => {
-  for (let i in pickColours) {
-    pickColours[i].classList.remove("active");
-    pickColours[e].classList.add("active");
+  for (let a = 0; a < pickColours.length; a++) {
+    pickColours[a].classList.remove("active");
+    pickColours[b].classList.add("active");
   }
-  house.className = "house " + i;
+  house.className = "house " + a;
 };
